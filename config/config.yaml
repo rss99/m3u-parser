@@ -8,4 +8,4 @@ OUTPUT_FILE:
   "output/out.m3u"
 # A neat progress bar for large M3Us. Might not work on Linux. If so, change to False
 USE_PROGRESS_BAR:
-  True
+  False
