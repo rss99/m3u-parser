@@ -7,21 +7,21 @@ Do you use IPTV or any such service? If you're like me, your provider perhaps fu
  * Just clone this repository into your desired directory
 
 ## Config:
- * In the config/ directory, edit the sample config.yaml as follows:
-
- ** REMOTE_URL:
+ * In the config/ directory, edit the sample config.yaml as follows. Don't change or mess with the (UPPER CASE) paramater names, or the script will not work:
+ 
+#REMOTE_URL:
       "<<enter your remote M3U URL, which you will have received from your provider. These are in a standard format"
  
- ** FILTER_FILE:
+FILTER_FILE:
       "config/<<drop a text file name in here, where you have stored your list of preferred categories. One line per category, exactly as the name appears in the M3U>>"
 
- ** INPUT_FILE:
+INPUT_FILE:
       "<<enter a file name the script will use e.g. raw.m3u>>"
       
- ** OUTPUT_FILE:
+ OUTPUT_FILE:
       "<<enter a file name where the resulting clean m3u will be written in the output dir e.g. output/out.m3u>>"
       
- ** USE_PROGRESS_BAR:
+ USE_PROGRESS_BAR:
       True
  
  * For the last item, USE_PROGRASS_BAR, as the name suggests this is a neat progress bar for large M3Us. However it might not work on Linux because of character code differences between OSs. If so, change to False
