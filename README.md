@@ -11,12 +11,16 @@ Do you use IPTV or any such service? If you're like me, your provider perhaps fu
 
  ** REMOTE_URL:
       "<<enter your remote M3U URL, which you will have received from your provider. These are in a standard format"
+ 
  ** FILTER_FILE:
       "config/<<drop a text file name in here, where you have stored your list of preferred categories. One line per category, exactly as the name appears in the M3U>>"
+
  ** INPUT_FILE:
       "<<enter a file name the script will use e.g. raw.m3u>>"
+      
  ** OUTPUT_FILE:
       "<<enter a file name where the resulting clean m3u will be written in the output dir e.g. output/out.m3u>>"
+      
  ** USE_PROGRESS_BAR:
       True
  
