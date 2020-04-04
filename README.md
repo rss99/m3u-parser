@@ -22,9 +22,9 @@ Do you use IPTV or any such service? If you're like me, your provider perhaps fu
 
 ## First run:
  1. Remember to update your config.yaml as described above
- 2. At this point, you may not know exactly which categories you are most interested in. SO just leave the config/megafaves.txt file as it is for now and move to the next step 
+ 2. At this point, you may not know exactly which categories you are most interested in. So, just leave the config/megafaves.txt file as it is for now and move to the next step 
  3. Run using python main.py from the directory you used to clone the repository
- 4. An output file will appear in the root project directory (default name is all_grp.txt). This is a list of EVERY catorey in your M3U. Go ahead and select the categories you like in this file and copy them into the config/megafaves.txt file. 
+ 4. An output file will appear in the output/ directory (default name is all_grp.txt). This is a list of EVERY catorey in your M3U. Go ahead and select the categories you like in this file and copy them into the config/megafaves.txt file. 
  5. Run again as per 3. Hey presto! You will find a nicely modifed (default: out.m3u) in the output/ directory. Go ahead and link your media player to that file (making sure to specify that your M3U is now a local file, rather than remote.
  
 You'll now have a clean, short playlist, focussed on the content you want to see
