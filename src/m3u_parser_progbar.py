@@ -40,12 +40,10 @@ def retrieveM3U():
         sys.exit("Invalid remote M3U URL supplied, please check your config.yaml...")
 
     start_time = time.time()
-
-    wanted = open(FILTER_FILE, "r").readlines()
-
     lines = []
     all_pl = []
 
+    wanted = open(FILTER_FILE, "r").readlines()
     out_file = open(OUTPUT_FILE, 'w')
     out_file.writelines("#EXTM3U\n")
     out_file.close()
@@ -61,16 +59,13 @@ def retrieveM3U():
         with open(INPUT_FILE, 'r') as infile:
             with open(OUTPUT_FILE, 'a') as outfile:
                 for line in infile:
-
                     if(USE_PB): getProgress(iterator, count)
-
                     if ("#EXTM3U" in line):
                         continue
                     else:
                         lines.append(line)
 
                     if len(lines) >= 2:
-
                         grp = lines[0].split('group-title=\"')[1].split('\"')
 
                         if(grp is not None and grp[0] in fave):

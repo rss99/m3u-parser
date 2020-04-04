@@ -1,6 +1,6 @@
 REMOTE_URL:
   ""
-FILTxER_FILE:
+FILTER_FILE:
   "config/megafaves.txt"
 INPUT_FILE:
   "raw.m3u"
