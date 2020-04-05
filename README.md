@@ -5,6 +5,8 @@ Do you use IPTV or any such service? If you're like me, your provider perhaps fu
 
 ## Installation:
  * Just clone this repository into your desired directory
+ * In the root of the project, create two directories: logs/ and output/
+ 
 ## Config:
  * In the config/ directory, edit the sample config.yaml as follows. Don't change or mess with the (UPPER CASE) paramater names, or the script will not work:
 ### REMOTE_URL:
