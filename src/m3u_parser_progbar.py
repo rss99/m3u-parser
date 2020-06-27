@@ -3,11 +3,12 @@ import time
 from urllib import request
 import math
 import yaml
+from pathlib import Path
 
 def get_config(item):
 
     #config_file = Path("../config/") / "config.yaml"
-    config_file = "config/config.yaml"
+    config_file = Path("config/config.yaml").absolute()
 
     try:
         with open(config_file, 'r') as stream:

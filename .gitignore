@@ -1,4 +1,5 @@
 .idea/
 output/
 logs/
+src/__pycache__/
 raw.m3u

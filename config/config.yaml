@@ -1,5 +1,5 @@
 REMOTE_URL:
-  ""
+  "http://neptv.net:83/get.php?username=pablofer&password=68319683&type=m3u_plus&output=ts"
 FILTER_FILE:
   "config/megafaves.txt"
 INPUT_FILE:
