@@ -27,5 +27,4 @@ Do you use IPTV or any such service? If you're like me, your provider perhaps fu
  4. An output file will appear in the output/ directory (default name is all_grp.txt). This is a list of EVERY catorey in your M3U. Go ahead and select the categories you like in this file and copy them into the config/megafaves.txt file. 
  5. Run again as per 3. Hey presto! You will find a nicely modifed (default: out.m3u) in the output/ directory. Go ahead and link your media player to that file (making sure to specify that your M3U is now a local file, rather than remote.
  
-You'll now have a clean, short playlist, focussed on the content you want to see
-
+You'll now have a clean, short playlist, focused on the content you want to see
