@@ -3,3 +3,5 @@ output/
 logs/
 src/__pycache__/
 raw.m3u
+config/anovafaves.txt
+config/megafaves.txt

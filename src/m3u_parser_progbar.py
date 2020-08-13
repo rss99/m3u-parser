@@ -8,7 +8,7 @@ from pathlib import Path
 def get_config(item):
 
     #config_file = Path("../config/") / "config.yaml"
-    config_file = Path("config/config.yaml").absolute()
+    config_file = Path("config/config_anova.yaml").absolute()
 
     try:
         with open(config_file, 'r') as stream:
@@ -21,7 +21,7 @@ def get_config(item):
 
 def getProgress(iterator, total, progress_points=125, gaps=1):
     if (iterator % gaps == 0):
-        pct = "{:.2f}%".format(round((iterator / total), 4) * 100)
+        pct = "{:.0f}%".format(round((iterator / total), 4) * 100)
         bar = ['=' * math.ceil((iterator / total) * progress_points) + '>>' +
                '.' * (math.ceil((1 - (iterator / total)) * progress_points))]
 
@@ -44,45 +44,45 @@ def retrieveM3U():
     lines = []
     all_pl = []
 
-    wanted = open(FILTER_FILE, "r").readlines()
-    out_file = open(OUTPUT_FILE, 'w')
+    wanted = open(FILTER_FILE, "r", encoding='cp437').readlines()
+    out_file = open(OUTPUT_FILE, 'w', encoding='cp437')
     out_file.writelines("#EXTM3U\n")
     out_file.close()
 
     iterator = 1
 
-    with open(INPUT_FILE) as f:
+    with open(INPUT_FILE, encoding='cp437') as f:
         count = len(f.read().split('\n')) - 1
 
     count *= len(wanted)
 
     for fave in wanted:
-        with open(INPUT_FILE, 'r') as infile:
-            with open(OUTPUT_FILE, 'a') as outfile:
-                for line in infile:
-                    if(USE_PB): getProgress(iterator, count)
-                    if ("#EXTM3U" in line):
-                        continue
-                    else:
-                        lines.append(line)
+            with open(INPUT_FILE, 'r', encoding='cp437') as infile:
+                with open(OUTPUT_FILE, 'a', encoding='cp437') as outfile:
+                    for line in infile:
+                        if(USE_PB): getProgress(iterator, count)
+                        if ("#EXTM3U" in line):
+                            continue
+                        else:
+                            lines.append(line)
 
-                    if len(lines) >= 2:
-                        grp = lines[0].split('group-title=\"')[1].split('\"')
+                        if len(lines) >= 2:
+                            grp = lines[0].split('group-title=\"')[1].split('\"')
 
-                        if(grp is not None and grp[0] in fave):
-                            outfile.writelines(lines)
-                        elif (grp is not None and grp[0] not in all_pl):
-                            all_pl.append(grp[0])
+                            if(grp is not None and grp[0] in fave):
+                                outfile.writelines(lines)
+                            elif (grp is not None and grp[0] not in all_pl):
+                                all_pl.append(grp[0])
 
-                        lines = []
+                            lines = []
 
-                    iterator += 1
+                        iterator += 1
 
     print('\n\n[M3UP]: Produced compressed file of ' + str(len(open(OUTPUT_FILE,'r').readlines())))
     print("[M3UP]: Process took %s seconds" % "{:.2f}".format(time.time() - start_time))
 
     all_pl.sort()
 
-    with open('output/all_grp.txt', 'w') as f:
+    with open('output/all_grp.txt', 'w', encoding='cp437') as f:
         for item in all_pl:
             f.write("%s\n" % item)
